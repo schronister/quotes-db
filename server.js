@@ -76,7 +76,7 @@ app.delete("/delete", function(req,res){
 
 app.put("/update/:id", function(req,res){
   console.log(req.params.id);
-  connection.query("UPDATE quotes SET quote = ?, author = ? WHERE id", [ req.body.quote, req.body.author, req.params.id], function(err,response){
+  connection.query("UPDATE quotes SET quote = ?, author = ? WHERE id = ?", [ req.body.quote, req.body.author, req.params.id], function(err,response){
     if (err) throw err;
     console.log("quote updated");
     res.redirect("/");
