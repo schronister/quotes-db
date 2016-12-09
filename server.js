@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
 var app = express();
-var port = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
@@ -19,10 +19,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 var mysql = require("mysql");
+console.log(process.env.JAWSDB_URL);
 
 var connection; 
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
+  console.log("hit the jawsdb ");
 } else{
   connection = mysql.createConnection({
   host: "localhost",
@@ -84,6 +86,6 @@ app.put("/update/:id", function(req,res){
 
 // Express and MySQL code should go here.
 
-app.listen(port, function() {
+app.listen(PORT, function() {
   console.log("Listening on PORT " + port);
 });
