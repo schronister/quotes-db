@@ -1,18 +1,31 @@
 {
-  "name": "exercise1_feel_state",
+  "name": "quotes-db",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.12.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schronister/quotes-db.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.14.2",
-    "express": "^4.13.4",
-    "express-handlebars": "^3.0.0",
-    "method-override": "^2.3.5",
-    "mysql": "^2.10.2"
-  }
+  "bugs": {
+    "url": "https://github.com/schronister/quotes-db/issues"
+  },
+  "engines": {
+    "node": "7.0.0"
+  },
+  "homepage": "https://github.com/schronister/quotes-db#readme"
 }
