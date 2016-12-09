@@ -87,5 +87,5 @@ app.put("/update/:id", function(req,res){
 // Express and MySQL code should go here.
 
 app.listen(PORT, function() {
-  console.log("Listening on PORT " + port);
+  console.log("Listening on PORT " + PORT);
 });
